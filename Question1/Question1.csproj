@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2984CAE3-7EE2-482B-ABD1-A13E7CD6B655}</ProjectGuid>
+    <ProjectGuid>{FFFE66A8-D136-496A-97B3-BC17B504FD48}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CustomsWareQ1andQ2</RootNamespace>
-    <AssemblyName>CustomsWareQ1andQ2</AssemblyName>
+    <RootNamespace>Question1</RootNamespace>
+    <AssemblyName>Question1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,5 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="File\Q1_Text.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E/Y "$(ProjectDir)\File" "$(TargetDir)\File\*"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
